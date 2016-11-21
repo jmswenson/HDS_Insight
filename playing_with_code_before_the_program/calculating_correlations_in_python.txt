@@ -1,0 +1,3 @@
+Seems like a really good example here:
+
+http://www.tradinggeeks.net/2015/08/calculating-correlation-in-python/

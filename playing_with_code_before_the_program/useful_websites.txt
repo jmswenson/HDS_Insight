@@ -1,0 +1,5 @@
+Calculating Pearson in Python using numpy and pandas:
+
+http://www.tradinggeeks.net/2015/08/calculating-correlation-in-python/
+
+R packages: https://cran.r-project.org/web/views/

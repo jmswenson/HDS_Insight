@@ -1,0 +1,564 @@
+
+<!DOCTYPE html><!-- This site was created in Webflow. http://www.webflow.com--><!-- Last Published: Thu Aug 11 2016 01:03:35 GMT+0000 (UTC) --><html data-wf-domain="www.insighthealthdata.com" data-wf-page="575a3225be8188bf7a028ecd" data-wf-site="575a3225be8188bf7a028e29"><head><meta charset="utf-8"><title>Health Data Fellows</title><meta content="Health Data Fellows" property="og:title"><meta content="width=device-width, initial-scale=1" name="viewport"><meta content="Webflow" name="generator"><link href="https://daks2k3a4ib2z.cloudfront.net/575a3225be8188bf7a028e29/css/health-data.webflow.2faf0e57b.css" rel="stylesheet" type="text/css"><script src="https://ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js"></script><script type="text/javascript">WebFont.load({
+
+google: {
+
+families: ["Open Sans:300,300italic,400,400italic,600,600italic,700,700italic,800,800italic"]
+
+}
+
+});</script><script src="https://daks2k3a4ib2z.cloudfront.net/0globals/modernizr-2.7.1.js" type="text/javascript"></script><link href="https://daks2k3a4ib2z.cloudfront.net/575a3225be8188bf7a028e29/57aabe852a4ca7f058ec0c1f_favicon-32x32.png" rel="shortcut icon" type="image/x-icon"><link href="https://daks2k3a4ib2z.cloudfront.net/575a3225be8188bf7a028e29/57aabc4be18710ca163e2f03_favicon-256x256.png" rel="apple-touch-icon"><style>
+
+.active_item_blue { border-bottom: 3px solid #577ada !important; padding-bottom: 6px !important; }
+
+.active_item_green { border-bottom: 3px solid #49a99b !important; padding-bottom: 6px !important; }
+
+.active_item_orange { border-bottom: 3px solid #f28d45 !important; padding-bottom: 6px !important; }
+
+.circle_container { z-index: 50 !important; }
+
+</style><style>
+
+@media screen and (max-width: 480px) {
+
+.fellows_grid {
+
+margin-left:5%;
+
+}
+
+}
+
+.fellow_item:hover .fellows_tooltip { display: block; }
+
+.all_headers_container{ overflow: hidden; white-space: nowrap; vertical-align: top; }
+
+.nav_item_middle:hover .middle_nav_item { opacity: 1; }
+
+.slide_container_1 { position: absolute !important; }
+
+.slide_container_2 { position: absolute !important; }
+
+.slide_container_3 { position: absolute !important; }
+
+.slide_container_4 { position: absolute !important; }
+
+.program_slide_1, .program_slide_2, .program_slide_3, .program_slide_4 { position: absolute !important;}
+
+.fellows_slide_1, .fellows_slide_2, .fellows_slide_3, .fellows_slide_4, .fellows_slide_5 { position: absolute !important;}
+
+.mentorship_slide_1, .mentorship_slide_2 { position: absolute !important;}
+
+.industry_slide_1, .industry_slide_2 { position: absolute !important;}
+
+.community_slide_1, .community_slide_2 { position: absolute !important;}
+
+#link_program:hover { color: #5578d6; border-top: 3px solid #efefef; border-left: 3px solid #efefef; border-right: 3px solid #efefef; background: #fafafa; } 
+
+.header_slider { overflow: hidden !important; }
+
+.apply_now_btn { vertical-align: top;}
+
+.btn_signup { vertical-align: top;}
+
+.mobile_nav_button { cursor: pointer; }
+
+.mobile_active_nav { color: #587adb !important; }
+
+.program_slide_item { box-sizing: border-box; vertical-align: top;}
+
+.fellows_slide_item { box-sizing: border-box; vertical-align: top;}
+
+.mentorship_slide_item { box-sizing: border-box; vertical-align: top;}
+
+.industry_slide_item { box-sizing: border-box; vertical-align: top;}
+
+.community_slide_item { box-sizing: border-box; vertical-align: top;}
+
+.industry_slide1_content { white-space: normal;}
+
+.it_transparent_text { white-space: normal;}
+
+.caption_text { white-space: normal;}
+
+.nav_item_faq:hover .nav_text_item {opacity:1;}
+
+.faq_category_item {cursor: pointer;}
+
+.question { vertical-align: middle;}
+
+
+
+.blue_link:active, .blue_link:link, .blue_link:visited, .blue_link:hover {color: #577ada;}
+
+
+
+.circle { width: 16px; height: 16px; border-radius: 50%; border: 2px solid rgba(255,255,255, 0.5); margin: 0px 8px; display: inline-block; cursor: pointer; -webkit-transition: all 0.2s; -moz-transition: all 0.2s; -ms-transition: all 0.2s; -o-transition: all 0.2s; transition: all 0.2s; }
+
+.circle:hover { background-color: #FFF; border: 2px solid #FFF; }
+
+.filled { background-color: #FFF; border: 2px solid #FFF; }
+
+
+
+.blue_circle { width: 12px; height: 12px; border-radius:50%; border: 3px solid #aabbea; margin: 0px 8px; display: inline-block; cursor: pointer; -webkit-transition: all 0.2s; -moz-transition: all 0.2s; -ms-transition: all 0.2s; -o-transition: all 0.2s; transition: all 0.2s;}
+
+.blue_circle:hover { background-color: #5578d6; border: 3px solid #5578d6;}
+
+.blue_filled { background-color: #5578d6; border: 3px solid #5578d6;}
+
+
+
+/* animations */
+
+.slide_inactive { left: 150% !important; }
+
+@keyframes slide_from_left_anim {
+
+from { left: 150%; }
+
+to { left: 50%; }
+
+}
+
+.slide_from_left {
+
+animation-fill-mode: forwards;
+
+animation-name: slide_from_left_anim;
+
+animation-duration: 1s;
+
+}
+
+
+
+@keyframes slide_to_right_anim {
+
+from { left: 50%; }
+
+to { left: -150%; }
+
+}
+
+.slide_to_right {
+
+animation-fill-mode: forwards;
+
+animation-name: slide_to_right_anim;
+
+animation-duration: 1s;
+
+}
+
+/* animations */
+
+
+
+/* animations header*/
+
+.slide_inactive_h { left: 100% !important; }
+
+@keyframes slide_from_left_anim_h {
+
+from { left: 100%; }
+
+to { left: 0%; }
+
+}
+
+.slide_from_left_h {
+
+animation-fill-mode: forwards;
+
+animation-name: slide_from_left_anim_h;
+
+animation-duration: 1s;
+
+}
+
+
+
+@keyframes slide_to_right_anim_h {
+
+from { left: 0%; }
+
+to { left: -100%; }
+
+}
+
+.slide_to_right_h {
+
+animation-fill-mode: forwards;
+
+animation-name: slide_to_right_anim_h;
+
+animation-duration: 1s;
+
+}
+
+/* animations header*/
+
+
+
+</style></head>
+
+
+
+<body><div class="full_website w-clearfix" id="full_website"><div class="logo_nav"><div class="upper_header_wrapper w-clearfix"><a class="site_logo w-inline-block" href="/"><img src="http://uploads.webflow.com/575a3225be8188bf7a028e29/575a3225be8188bf7a028e9c_insight_logo.png"></a><div class="middle_nav"><a class="health_nav_it w-inline-block" href="http://insightdatascience.com" id="header_bt_1"><div class="health_nav_text">data science</div></a><a class="health_nav_it middle w-inline-block" href="http://insightdataengineering.com" id="header_bt_2"><div class="health_nav_text">data engineering</div></a><a class="health_nav_it middle w-inline-block" href="/" id="header_bt_3"><div class="health_nav_text">health data</div></a></div><div class="right_nav"><a class="orange_nav right_nav_item w-inline-block" href="/fellows" id="header_bt_5"><div class="right_nav_item_text">fellows</div></a><a class="orange_nav right_nav_item w-inline-block" href="/apply" id="header_bt_6"><div class="padding right_nav_item_text">apply</div></a><a class="hide orange_nav right_nav_item w-inline-block" href="/faq" id="header_bt_7"><div class="padding right_nav_item_text">faq</div></a><a class="orange_nav right_nav_item w-inline-block" href="http://blog.insightdatascience.com" id="header_bt_8"><div class="padding right_nav_item_text">blog</div></a></div><img class="mobile_nav_button orange_button" src="http://uploads.webflow.com/575a3225be8188bf7a028e29/575a3225be8188bf7a028e43_mobile_nav_button_orange.png"></div></div><div class="fellows_content" id="header"><div class="fellows_title">health data Fellows</div><div class="fellows_subtitle">&nbsp;</div><div class="fellows_grid"><div class="fellows_list w-dyn-list"><div class="w-clearfix w-dyn-items w-row"><div class="fellow_item w-col w-col-2 w-dyn-item"><div class="fellows_tooltip"><div class="arrow_down"></div><div class="orange_header tooltip_header"><div class="tooltip_header_container"><div class="tooltip_name">Ting Feng</div><div class="toottip_title">Scientific Product Manager</div><div class="comma">,</div><div class="tooltip_company">Seven Bridges</div></div></div><div class="tooltip_content"><div class="tooltip_title">Insight Project</div><div class="tooltip_project">Just-go-ah: Detecting Parkinson&#39;s disease from voice recordings</div><div class="tooltip_title">background</div><div class="tooltip_background">Neuroscience, Johns Hopkins University, PhD</div></div></div><div class="fellow_img orange_img" style="background-image: url('https://daks2k3a4ib2z.cloudfront.net/575a3225be8188bf7a028e29/579661abe29e4f420c8ca742_TingFeng-.jpg');"><div class="fellow_caption_back"><div class="fellow_name">Ting Feng</div><div class="fellow_company">Seven Bridges</div></div></div></div><div class="fellow_item w-col w-col-2 w-dyn-item"><div class="fellows_tooltip"><div class="arrow_down"></div><div class="orange_header tooltip_header"><div class="tooltip_header_container"><div class="tooltip_name">Dennis Dean</div><div class="toottip_title">R&amp;D Scientist</div><div class="comma">,</div><div class="tooltip_company">Seven Bridges</div></div></div><div class="tooltip_content"><div class="tooltip_title">Insight Project</div><div class="tooltip_project">Forum Post Assistant: Increasing Adherence through Community Integration</div><div class="tooltip_title">background</div><div class="tooltip_background">Sleep &amp; Cardiovascular Medicine, Brigham &amp; Women&#39;s Hospital &amp; Harvard Medical School, Research Fellow</div></div></div><div class="fellow_img orange_img" style="background-image: url('https://daks2k3a4ib2z.cloudfront.net/575a3225be8188bf7a028e29/5789664c0b0d70d50fc7303e_DennisA.Dean-.jpg');"><div class="fellow_caption_back"><div class="fellow_name">Dennis Dean</div><div class="fellow_company">Seven Bridges</div></div></div></div><div class="fellow_item w-col w-col-2 w-dyn-item"><div class="fellows_tooltip"><div class="arrow_down"></div><div class="orange_header tooltip_header"><div class="tooltip_header_container"><div class="tooltip_name">Mike Klein</div><div class="toottip_title">Data Scientist</div><div class="comma">,</div><div class="tooltip_company">Tamr</div></div></div><div class="tooltip_content"><div class="tooltip_title">Insight Project</div><div class="tooltip_project">Steps4health: Leveraging Fitbit data for automated clinical diagnostics</div><div class="tooltip_title">background</div><div class="tooltip_background">Cognitive Neuroscience, McGill University, PhD</div></div></div><div class="fellow_img orange_img" style="background-image: url('https://daks2k3a4ib2z.cloudfront.net/575a3225be8188bf7a028e29/578810d56c870b1d7cf96d34_MikeE.Klein-.jpg');"><div class="fellow_caption_back"><div class="fellow_name">Mike Klein</div><div class="fellow_company">Tamr</div></div></div></div><div class="fellow_item w-col w-col-2 w-dyn-item"><div class="fellows_tooltip"><div class="arrow_down"></div><div class="orange_header tooltip_header"><div class="tooltip_header_container"><div class="tooltip_name">Derrick DeConti</div><div class="toottip_title">Bioinformatician</div><div class="comma">,</div><div class="tooltip_company">Dana Farber Cancer Institute</div></div></div><div class="tooltip_content"><div class="tooltip_title">Insight Project</div><div class="tooltip_project">PAINS Train: Identifying false positive results in drug screens</div><div class="tooltip_title">background</div><div class="tooltip_background">Bioinformatics, University of Massachusetts Medical School, PhD</div></div></div><div class="fellow_img orange_img" style="background-image: url('https://daks2k3a4ib2z.cloudfront.net/575a3225be8188bf7a028e29/5787f17b77425f1e5d120954_DerrickDeConti-.jpg');"><div class="fellow_caption_back"><div class="fellow_name">Derrick DeConti</div><div class="fellow_company">Dana Farber Cancer Institute</div></div></div></div><div class="fellow_item w-col w-col-2 w-dyn-item"><div class="fellows_tooltip"><div class="arrow_down"></div><div class="orange_header tooltip_header"><div class="tooltip_header_container"><div class="tooltip_name">Shane Bussmann</div><div class="toottip_title">Data Scientist</div><div class="comma">,</div><div class="tooltip_company">Understory</div></div></div><div class="tooltip_content"><div class="tooltip_title">Insight Project</div><div class="tooltip_project">Grow Hubway: Find the best spot for a new Hubway station</div><div class="tooltip_title">background</div><div class="tooltip_background">Astrophysics, Cornell University, Postdoc</div></div></div><div class="fellow_img orange_img" style="background-image: url('https://daks2k3a4ib2z.cloudfront.net/575a3225be8188bf7a028e29/578947a40b0d70d50fc72743_ShaneBussmann-.jpg');"><div class="fellow_caption_back"><div class="fellow_name">Shane Bussmann</div><div class="fellow_company">Understory</div></div></div></div><div class="fellow_item w-col w-col-2 w-dyn-item"><div class="fellows_tooltip"><div class="arrow_down"></div><div class="orange_header tooltip_header"><div class="tooltip_header_container"><div class="tooltip_name">Aqeel Ahmed</div><div class="toottip_title">Data Scientist</div><div class="comma">,</div><div class="tooltip_company">Seven Bridges</div></div></div><div class="tooltip_content"><div class="tooltip_title">Insight Project</div><div class="tooltip_project">SideFinder: Predicts drug side effects using drug-protein interaction patterns</div><div class="tooltip_title">background</div><div class="tooltip_background">Biophysics, University of Michigan, Postdoc</div></div></div><div class="fellow_img orange_img" style="background-image: url('https://daks2k3a4ib2z.cloudfront.net/575a3225be8188bf7a028e29/578930100b0d70d50fc71317_AqeelAhmed-0106.jpg');"><div class="fellow_caption_back"><div class="fellow_name">Aqeel Ahmed</div><div class="fellow_company">Seven Bridges</div></div></div></div><div class="fellow_item w-col w-col-2 w-dyn-item"><div class="fellows_tooltip"><div class="arrow_down"></div><div class="orange_header tooltip_header"><div class="tooltip_header_container"><div class="tooltip_name">Jing Tong</div><div class="toottip_title">Bioinformatician</div><div class="comma">,</div><div class="tooltip_company">Foundation Medicine</div></div></div><div class="tooltip_content"><div class="tooltip_title">Insight Project</div><div class="tooltip_project">Survive Sepsis: Discover the biomarkers of sepsis resilience</div><div class="tooltip_title">background</div><div class="tooltip_background">Computational Biology, University of Texas Southwestern Medical Center at Dallas, PhD</div></div></div><div class="fellow_img orange_img" style="background-image: url('https://daks2k3a4ib2z.cloudfront.net/575a3225be8188bf7a028e29/5796618769d322c95dbbc3f6_JingTong-.jpg');"><div class="fellow_caption_back"><div class="fellow_name">Jing Tong</div><div class="fellow_company">Foundation Medicine</div></div></div></div><div class="fellow_item w-col w-col-2 w-dyn-item"><div class="fellows_tooltip"><div class="arrow_down"></div><div class="orange_header tooltip_header"><div class="tooltip_header_container"><div class="tooltip_name">Gregory Koytiger</div><div class="toottip_title">Scientist</div><div class="comma">,</div><div class="tooltip_company">Immuneering </div></div></div><div class="tooltip_content"><div class="tooltip_title">Insight Project</div><div class="tooltip_project">Oncology Oracle: Predict Cancer Thereaputic Response from Cell Line Data</div><div class="tooltip_title">background</div><div class="tooltip_background">Systems Biology, Harvard, Postdoc</div></div></div><div class="fellow_img orange_img" style="background-image: url('https://daks2k3a4ib2z.cloudfront.net/575a3225be8188bf7a028e29/57895194811907e90704d761_GregoryKoytiger-.jpg');"><div class="fellow_caption_back"><div class="fellow_name">Gregory Koytiger</div><div class="fellow_company">Immuneering </div></div></div></div><div class="fellow_item w-col w-col-2 w-dyn-item"><div class="fellows_tooltip"><div class="arrow_down"></div><div class="orange_header tooltip_header"><div class="tooltip_header_container"><div class="tooltip_name">Kyle Satterstrom</div><div class="toottip_title">Computational Biologist</div><div class="comma">,</div><div class="tooltip_company">The Broad Institute</div></div></div><div class="tooltip_content"><div class="tooltip_title">Insight Project</div><div class="tooltip_project">OncoPredictor: Predicting patient response to chemotherapy using genomic data</div><div class="tooltip_title">background</div><div class="tooltip_background">Cell Biology, Harvard, Postdoc</div></div></div><div class="fellow_img orange_img" style="background-image: url('https://daks2k3a4ib2z.cloudfront.net/575a3225be8188bf7a028e29/5787eecf7f38944a5f0b85b7_F.KyleSatterstrom-.jpg');"><div class="fellow_caption_back"><div class="fellow_name">Kyle Satterstrom</div><div class="fellow_company">The Broad Institute</div></div></div></div><div class="fellow_item w-col w-col-2 w-dyn-item"><div class="fellows_tooltip"><div class="arrow_down"></div><div class="orange_header tooltip_header"><div class="tooltip_header_container"><div class="tooltip_name">Andrew Mulder</div><div class="toottip_title">Data Scientist</div><div class="comma">,</div><div class="tooltip_company">Thomson Reuters</div></div></div><div class="tooltip_content"><div class="tooltip_title">Insight Project</div><div class="tooltip_project">EatRipe: Find fruits and vegetables that are in season</div><div class="tooltip_title">background</div><div class="tooltip_background">Physics, Cornell University, PhD</div></div></div><div class="fellow_img orange_img" style="background-image: url('https://daks2k3a4ib2z.cloudfront.net/575a3225be8188bf7a028e29/5789419e05a747b80faa2b90_AndrewMulder-.jpg');"><div class="fellow_caption_back"><div class="fellow_name">Andrew Mulder</div><div class="fellow_company">Thomson Reuters</div></div></div></div><div class="fellow_item w-col w-col-2 w-dyn-item"><div class="fellows_tooltip"><div class="arrow_down"></div><div class="orange_header tooltip_header"><div class="tooltip_header_container"><div class="tooltip_name">Bin Xiang</div><div class="toottip_title">Data Scientist</div><div class="comma">,</div><div class="tooltip_company">Aspen Technology</div></div></div><div class="tooltip_content"><div class="tooltip_title">Insight Project</div><div class="tooltip_project">Healthy Investment: Recommending investors for health startup companies</div><div class="tooltip_title">background</div><div class="tooltip_background">Environmental Sciences, Harvard, Postdoc</div></div></div><div class="fellow_img orange_img" style="background-image: url('https://daks2k3a4ib2z.cloudfront.net/575a3225be8188bf7a028e29/57966173581b868c5d3f015f_BinXiang-.jpg');"><div class="fellow_caption_back"><div class="fellow_name">Bin Xiang</div><div class="fellow_company">Aspen Technology</div></div></div></div><div class="fellow_item w-col w-col-2 w-dyn-item"><div class="fellows_tooltip"><div class="arrow_down"></div><div class="orange_header tooltip_header"><div class="tooltip_header_container"><div class="tooltip_name">Gaurav Kaushik</div><div class="toottip_title">Scientific Project Manager</div><div class="comma">,</div><div class="tooltip_company">Seven Bridges</div></div></div><div class="tooltip_content"><div class="tooltip_title">Insight Project</div><div class="tooltip_project">Boston Bikr: The scenic route to better health</div><div class="tooltip_title">background</div><div class="tooltip_background">Bioengineering, University of San Diego, PhD</div></div></div><div class="fellow_img orange_img" style="background-image: url('https://daks2k3a4ib2z.cloudfront.net/575a3225be8188bf7a028e29/57880ece7f38944a5f0bac65_GauravKaushik-0067.jpg');"><div class="fellow_caption_back"><div class="fellow_name">Gaurav Kaushik</div><div class="fellow_company">Seven Bridges</div></div></div></div><div class="fellow_item w-col w-col-2 w-dyn-item"><div class="fellows_tooltip"><div class="arrow_down"></div><div class="orange_header tooltip_header"><div class="tooltip_header_container"><div class="tooltip_name">Saran Vardhanabhuti</div><div class="toottip_title">Senior Statistician</div><div class="comma">,</div><div class="tooltip_company">Takeda</div></div></div><div class="tooltip_content"><div class="tooltip_title">Insight Project</div><div class="tooltip_project">Analytics for Comprehend: Separating good from bad, improving clinical trial site performance</div><div class="tooltip_title">background</div><div class="tooltip_background">Biology, Harvard, Postdoc</div></div></div><div class="fellow_img orange_img" style="background-image: url('https://daks2k3a4ib2z.cloudfront.net/575a3225be8188bf7a028e29/57881e5f6c870b1d7cf97108_SaranVardhanabhuti.jpg');"><div class="fellow_caption_back"><div class="fellow_name">Saran Vardhanabhuti</div><div class="fellow_company">Takeda</div></div></div></div><div class="fellow_item w-col w-col-2 w-dyn-item"><div class="fellows_tooltip"><div class="arrow_down"></div><div class="orange_header tooltip_header"><div class="tooltip_header_container"><div class="tooltip_name">Nicholas Baro</div><div class="toottip_title">Scientific Project Manager</div><div class="comma">,</div><div class="tooltip_company">Seven Bridges</div></div></div><div class="tooltip_content"><div class="tooltip_title">Insight Project</div><div class="tooltip_project">MicrobeSifter: Finding signal in complex genomic samples</div><div class="tooltip_title">background</div><div class="tooltip_background">Immunology &amp; Infectious Disease, Harvard, Postdoc</div></div></div><div class="fellow_img orange_img" style="background-image: url('https://daks2k3a4ib2z.cloudfront.net/575a3225be8188bf7a028e29/57896c1e0b0d70d50fc735e9_NicholasBaro-.jpg');"><div class="fellow_caption_back"><div class="fellow_name">Nicholas Baro</div><div class="fellow_company">Seven Bridges</div></div></div></div><div class="fellow_item w-col w-col-2 w-dyn-item"><div class="fellows_tooltip"><div class="arrow_down"></div><div class="orange_header tooltip_header"><div class="tooltip_header_container"><div class="tooltip_name">Yancheng Lui</div><div class="toottip_title">Senior Data Engineer Associate</div><div class="comma">,</div><div class="tooltip_company">Athena Health</div></div></div><div class="tooltip_content"><div class="tooltip_title">Insight Project</div><div class="tooltip_project">Healthy Beats: Dectecting atrial fibrillation using Apple Watch sensor data</div><div class="tooltip_title">background</div><div class="tooltip_background">Infectious Disease, Cornell University, Postdoc</div></div></div><div class="fellow_img orange_img" style="background-image: url('https://daks2k3a4ib2z.cloudfront.net/575a3225be8188bf7a028e29/5796619a54bc905f0cc94583_YanchengLiu-.jpg');"><div class="fellow_caption_back"><div class="fellow_name">Yancheng Lui</div><div class="fellow_company">Athena Health</div></div></div></div><div class="fellow_item w-col w-col-2 w-dyn-item"><div class="fellows_tooltip"><div class="arrow_down"></div><div class="orange_header tooltip_header"><div class="tooltip_header_container"><div class="tooltip_name">Alexis Yelton</div><div class="toottip_title">Data Scientist</div><div class="comma">,</div><div class="tooltip_company">Rovi</div></div></div><div class="tooltip_content"><div class="tooltip_title">Insight Project</div><div class="tooltip_project">Runtrainr: Decrease your half marathon time with GPS data</div><div class="tooltip_title">background</div><div class="tooltip_background">Bioinformatics/Genomics, MIT, Postdoc</div></div></div><div class="fellow_img orange_img" style="background-image: url('https://daks2k3a4ib2z.cloudfront.net/575a3225be8188bf7a028e29/578810003ef1750112d37177_AlexisYelton-.jpg');"><div class="fellow_caption_back"><div class="fellow_name">Alexis Yelton</div><div class="fellow_company">Rovi</div></div></div></div><div class="fellow_item w-col w-col-2 w-dyn-item"><div class="fellows_tooltip"><div class="arrow_down"></div><div class="orange_header tooltip_header"><div class="tooltip_header_container"><div class="tooltip_name">Kristina Simmons</div><div class="toottip_title">Data Scientist</div><div class="comma">,</div><div class="tooltip_company">Recorded Future</div></div></div><div class="tooltip_content"><div class="tooltip_title">Insight Project</div><div class="tooltip_project">CharityChooser: Find your perfect charity</div><div class="tooltip_title">background</div><div class="tooltip_background">Neuroscience, University of Pennsylvania, Postdoc</div></div></div><div class="fellow_img orange_img" style="background-image: url('https://daks2k3a4ib2z.cloudfront.net/575a3225be8188bf7a028e29/57895fdb05a747b80faa303d_KristinaSimmons-.jpg');"><div class="fellow_caption_back"><div class="fellow_name">Kristina Simmons</div><div class="fellow_company">Recorded Future</div></div></div></div><div class="fellow_item w-col w-col-2 w-dyn-item"><div class="fellows_tooltip"><div class="arrow_down"></div><div class="orange_header tooltip_header"><div class="tooltip_header_container"><div class="tooltip_name">Daniel Martin</div><div class="toottip_title">Data Scientist</div><div class="comma">,</div><div class="tooltip_company">McKinsley Solutions</div></div></div><div class="tooltip_content"><div class="tooltip_title">Insight Project</div><div class="tooltip_project">Food Findr: Your guide to local, healthy dining in Boston</div><div class="tooltip_title">background</div><div class="tooltip_background">Quantitative Psychology, University of Virgina, PhD</div></div></div><div class="fellow_img orange_img" style="background-image: url('https://daks2k3a4ib2z.cloudfront.net/575a3225be8188bf7a028e29/57880bc17f38944a5f0bab5e_DanielP.Martin-.jpg');"><div class="fellow_caption_back"><div class="fellow_name">Daniel Martin</div><div class="fellow_company">McKinsley Solutions</div></div></div></div><div class="fellow_item w-col w-col-2 w-dyn-item"><div class="fellows_tooltip"><div class="arrow_down"></div><div class="orange_header tooltip_header"><div class="tooltip_header_container"><div class="tooltip_name">Joseph Paxton</div><div class="toottip_title">Data Scientist</div><div class="comma">,</div><div class="tooltip_company">Uber</div></div></div><div class="tooltip_content"><div class="tooltip_title">Insight Project</div><div class="tooltip_project">OpenPharma: Transparency in Drug Development</div><div class="tooltip_title">background</div><div class="tooltip_background">Psychology, Duke University, Postdoc</div></div></div><div class="fellow_img orange_img" style="background-image: url('https://daks2k3a4ib2z.cloudfront.net/575a3225be8188bf7a028e29/578928a505a747b80faa1478_JosephPaxton-.jpg');"><div class="fellow_caption_back"><div class="fellow_name">Joseph Paxton</div><div class="fellow_company">Uber</div></div></div></div><div class="fellow_item w-col w-col-2 w-dyn-item"><div class="fellows_tooltip"><div class="arrow_down"></div><div class="orange_header tooltip_header"><div class="tooltip_header_container"><div class="tooltip_name">Nicole Strang</div><div class="toottip_title">Data Science Engineer</div><div class="comma">,</div><div class="tooltip_company">Wayfair</div></div></div><div class="tooltip_content"><div class="tooltip_title">Insight Project</div><div class="tooltip_project">iHeartMeds: Finding the drugs that patients like best</div><div class="tooltip_title">background</div><div class="tooltip_background">Neuroscience, Temple University, Postdoc</div></div></div><div class="fellow_img orange_img" style="background-image: url('https://daks2k3a4ib2z.cloudfront.net/575a3225be8188bf7a028e29/57894f9305a747b80faa2dd4_NIcoleStrang-.jpg');"><div class="fellow_caption_back"><div class="fellow_name">Nicole Strang</div><div class="fellow_company">Wayfair</div></div></div></div><div class="fellow_item w-col w-col-2 w-dyn-item"><div class="fellows_tooltip"><div class="arrow_down"></div><div class="orange_header tooltip_header"><div class="tooltip_header_container"><div class="tooltip_name">Peter Komar</div><div class="toottip_title">Research Scientist</div><div class="comma">,</div><div class="tooltip_company">Seven Bridges</div></div></div><div class="tooltip_content"><div class="tooltip_title">Insight Project</div><div class="tooltip_project">SunnyMinutes: Check how much sunlight your place gets</div><div class="tooltip_title">background</div><div class="tooltip_background">Physics, Harvard, PhD</div></div></div><div class="fellow_img orange_img" style="background-image: url('https://daks2k3a4ib2z.cloudfront.net/575a3225be8188bf7a028e29/5787ec54e0b63f3f5f3baaa8_PeterKomar-.jpg');"><div class="fellow_caption_back"><div class="fellow_name">Peter Komar</div><div class="fellow_company">Seven Bridges</div></div></div></div><div class="fellow_item w-col w-col-2 w-dyn-item"><div class="fellows_tooltip"><div class="arrow_down"></div><div class="orange_header tooltip_header"><div class="tooltip_header_container"><div class="tooltip_name">Hui Hu</div><div class="comma">,</div></div></div><div class="tooltip_content"><div class="tooltip_title">Insight Project</div><div class="tooltip_project">NabeFinder: Find the Best Neighborhood for People with Disabilities</div><div class="tooltip_title">background</div><div class="tooltip_background">Epidemiology, University of Florida, PhD</div></div></div><div class="fellow_img orange_img" style="background-image: url('https://daks2k3a4ib2z.cloudfront.net/575a3225be8188bf7a028e29/578978030b0d70d50fc73f79_Hui%20Hu-.jpg');"><div class="fellow_caption_back"><div class="fellow_name">Hui Hu</div></div></div></div><div class="fellow_item w-col w-col-2 w-dyn-item"><div class="fellows_tooltip"><div class="arrow_down"></div><div class="orange_header tooltip_header"><div class="tooltip_header_container"><div class="tooltip_name">Jason Godlove</div><div class="toottip_title">Senior Data Scientist</div><div class="comma">,</div><div class="tooltip_company">Constant Therapy</div></div></div><div class="tooltip_content"><div class="tooltip_title">Insight Project</div><div class="tooltip_project">RehabTasker: Optimized difficulty for a smoother recovery</div><div class="tooltip_title">background</div><div class="tooltip_background">Bioengineering, UCSF, Postdoc</div></div></div><div class="fellow_img orange_img" style="background-image: url('https://daks2k3a4ib2z.cloudfront.net/575a3225be8188bf7a028e29/57896e5805a747b80faa3ea3_Jason%20Godlove-.jpg');"><div class="fellow_caption_back"><div class="fellow_name">Jason Godlove</div><div class="fellow_company">Constant Therapy</div></div></div></div><div class="fellow_item w-col w-col-2 w-dyn-item"><div class="fellows_tooltip"><div class="arrow_down"></div><div class="orange_header tooltip_header"><div class="tooltip_header_container"><div class="tooltip_name">Greg Antell</div><div class="toottip_title">Program Director</div><div class="comma">,</div><div class="tooltip_company">Insight Data Science</div></div></div><div class="tooltip_content"><div class="tooltip_title">Insight Project</div><div class="tooltip_project">Beating Pareto: Data driven approaches for improving medical crowdsourcing</div><div class="tooltip_title">background</div><div class="tooltip_background">Biomedical Engineering, Drexel University, PhD</div></div></div><div class="fellow_img orange_img" style="background-image: url('https://daks2k3a4ib2z.cloudfront.net/575a3225be8188bf7a028e29/5789755567a854dc0778dc3e_Greg-0916.jpg');"><div class="fellow_caption_back"><div class="fellow_name">Greg Antell</div><div class="fellow_company">Insight Data Science</div></div></div></div><div class="fellow_item w-col w-col-2 w-dyn-item"><div class="fellows_tooltip"><div class="arrow_down"></div><div class="orange_header tooltip_header"><div class="tooltip_header_container"><div class="tooltip_name">Raisa Karasik</div><div class="toottip_title">Data Scientist</div><div class="comma">,</div><div class="tooltip_company">Sqrll</div></div></div><div class="tooltip_content"><div class="tooltip_title">Insight Project</div><div class="tooltip_project">Sleep Insights: evaluating effectiveness of a sleep disorder treatment</div><div class="tooltip_title">background</div><div class="tooltip_background">Quantum Physics, BAE Systems, Research Engineer</div></div></div><div class="fellow_img orange_img" style="background-image: url('https://daks2k3a4ib2z.cloudfront.net/575a3225be8188bf7a028e29/5789749905a747b80faa3ea9_Raisa%20Karasik-.jpg');"><div class="fellow_caption_back"><div class="fellow_name">Raisa Karasik</div><div class="fellow_company">Sqrll</div></div></div></div><div class="fellow_item w-col w-col-2 w-dyn-item"><div class="fellows_tooltip"><div class="arrow_down"></div><div class="orange_header tooltip_header"><div class="tooltip_header_container"><div class="tooltip_name">Charmaine Demanuele</div><div class="toottip_title">Data Scientist</div><div class="comma">,</div><div class="tooltip_company">Biogen</div></div></div><div class="tooltip_content"><div class="tooltip_title">Insight Project</div><div class="tooltip_project">Therapy Prospector: Predicting Rehabilitation Effects for Constant Therapy Users</div><div class="tooltip_title">background</div><div class="tooltip_background">Pyschiatric Neuroimaging, Harvard Medical School, Postdoc</div></div></div><div class="fellow_img orange_img" style="background-image: url('https://daks2k3a4ib2z.cloudfront.net/575a3225be8188bf7a028e29/578973d0811907e90704fda0_Charmaine-0926.jpg');"><div class="fellow_caption_back"><div class="fellow_name">Charmaine Demanuele</div><div class="fellow_company">Biogen</div></div></div></div><div class="fellow_item w-col w-col-2 w-dyn-item"><div class="fellows_tooltip"><div class="arrow_down"></div><div class="orange_header tooltip_header"><div class="tooltip_header_container"><div class="tooltip_name">Licurgo de Almeida</div><div class="toottip_title">Data Scientist</div><div class="comma">,</div><div class="tooltip_company">Wayfair</div></div></div><div class="tooltip_content"><div class="tooltip_title">Insight Project</div><div class="tooltip_project">ATAT: Automated Triage Assignment Tool</div><div class="tooltip_title">background</div><div class="tooltip_background">Theoretical Neuroscience, Cornell University, Postdoc</div></div></div><div class="fellow_img orange_img" style="background-image: url('https://daks2k3a4ib2z.cloudfront.net/575a3225be8188bf7a028e29/5789773a0b0d70d50fc73f71_Licurgo%20Almeida-.jpg');"><div class="fellow_caption_back"><div class="fellow_name">Licurgo de Almeida</div><div class="fellow_company">Wayfair</div></div></div></div><div class="fellow_item w-col w-col-2 w-dyn-item"><div class="fellows_tooltip"><div class="arrow_down"></div><div class="orange_header tooltip_header"><div class="tooltip_header_container"><div class="tooltip_name">Agata Budzillo</div><div class="toottip_title">Analyst II - Neuroinformatics</div><div class="comma">,</div><div class="tooltip_company">Allen Institute for Brain Science</div></div></div><div class="tooltip_content"><div class="tooltip_title">Insight Project</div><div class="tooltip_project">Head-over-Heels: Detecting Parkinson&#39;s disease from accelerometer data </div><div class="tooltip_title">background</div><div class="tooltip_background">Neuroscience, University of Washington, Postdoc</div></div></div><div class="fellow_img orange_img" style="background-image: url('https://daks2k3a4ib2z.cloudfront.net/575a3225be8188bf7a028e29/57896fa20b0d70d50fc737f9_AgataBudzillo.jpg');"><div class="fellow_caption_back"><div class="fellow_name">Agata Budzillo</div><div class="fellow_company">Allen Institute for Brain Science</div></div></div></div><div class="fellow_item w-col w-col-2 w-dyn-item"><div class="fellows_tooltip"><div class="arrow_down"></div><div class="orange_header tooltip_header"><div class="tooltip_header_container"><div class="tooltip_name">Li Wang</div><div class="toottip_title">Scientist</div><div class="comma">,</div><div class="tooltip_company">The Broad Institute</div></div></div><div class="tooltip_content"><div class="tooltip_title">Insight Project</div><div class="tooltip_project">SynergyMiner: Find better drug combinations to treat cancer</div><div class="tooltip_title">background</div><div class="tooltip_background">Bioinformatics/Genomics, University of Colorado Boulder, PhD</div></div></div><div class="fellow_img orange_img" style="background-image: url('https://daks2k3a4ib2z.cloudfront.net/575a3225be8188bf7a028e29/57896ea3811907e90704f181_Li%20Wang-.jpg');"><div class="fellow_caption_back"><div class="fellow_name">Li Wang</div><div class="fellow_company">The Broad Institute</div></div></div></div><div class="fellow_item w-col w-col-2 w-dyn-item"><div class="fellows_tooltip"><div class="arrow_down"></div><div class="orange_header tooltip_header"><div class="tooltip_header_container"><div class="tooltip_name">Molu Shi</div><div class="toottip_title">Data Scientist</div><div class="comma">,</div><div class="tooltip_company">Humana</div></div></div><div class="tooltip_content"><div class="tooltip_title">Insight Project</div><div class="tooltip_project">Smart Inspector: Prioritize restaurant inspections using Yelp</div><div class="tooltip_title">background</div><div class="tooltip_background">Quantum Physics, MIT, PhD</div></div></div><div class="fellow_img orange_img" style="background-image: url('https://daks2k3a4ib2z.cloudfront.net/575a3225be8188bf7a028e29/5789703d811907e90704fa2d_Molu%20Shi-.jpg');"><div class="fellow_caption_back"><div class="fellow_name">Molu Shi</div><div class="fellow_company">Humana</div></div></div></div><div class="fellow_item w-col w-col-2 w-dyn-item"><div class="fellows_tooltip"><div class="arrow_down"></div><div class="orange_header tooltip_header"><div class="tooltip_header_container"><div class="tooltip_name">John Walk</div><div class="toottip_title">Data Scientist</div><div class="comma">,</div><div class="tooltip_company">Cinch Financials</div></div></div><div class="tooltip_content"><div class="tooltip_title">Insight Project</div><div class="tooltip_project">empath: Extracting smarter sentiments on antidepressants from Reddit</div><div class="tooltip_title">background</div><div class="tooltip_background">Physics, MIT, Postdoc</div></div></div><div class="fellow_img orange_img" style="background-image: url('https://daks2k3a4ib2z.cloudfront.net/575a3225be8188bf7a028e29/578976b4811907e90704fdea_John%20Walk-.jpg');"><div class="fellow_caption_back"><div class="fellow_name">John Walk</div><div class="fellow_company">Cinch Financials</div></div></div></div><div class="fellow_item w-col w-col-2 w-dyn-item"><div class="fellows_tooltip"><div class="arrow_down"></div><div class="orange_header tooltip_header"><div class="tooltip_header_container"><div class="tooltip_name">Daniel Neems</div><div class="toottip_title">Data Scientist</div><div class="comma">,</div><div class="tooltip_company">Higi</div></div></div><div class="tooltip_content"><div class="tooltip_title">Insight Project</div><div class="tooltip_project">Toppit: Diagnosing conversations about medical products on Reddit </div><div class="tooltip_title">background</div><div class="tooltip_background">Cell Biology &amp; Genetics, Northwestern, PhD</div></div></div><div class="fellow_img orange_img" style="background-image: url('https://daks2k3a4ib2z.cloudfront.net/575a3225be8188bf7a028e29/57896f12811907e90704f185_Daniel%20Neems-.jpg');"><div class="fellow_caption_back"><div class="fellow_name">Daniel Neems</div><div class="fellow_company">Higi</div></div></div></div><div class="fellow_item w-col w-col-2 w-dyn-item"><div class="fellows_tooltip"><div class="arrow_down"></div><div class="orange_header tooltip_header"><div class="tooltip_header_container"><div class="tooltip_name">Dario Marrocchelli</div><div class="toottip_title">Marketing Data Scientist</div><div class="comma">,</div><div class="tooltip_company">Wayfair</div></div></div><div class="tooltip_content"><div class="tooltip_title">Insight Project</div><div class="tooltip_project">RiskPredictor: Identify health risk before it is too late</div><div class="tooltip_title">background</div><div class="tooltip_background">Computational Material Sciences, MIT, Research Scientist</div></div></div><div class="fellow_img orange_img" style="background-image: url('https://daks2k3a4ib2z.cloudfront.net/575a3225be8188bf7a028e29/5789710b67a854dc0778d68e_Dario%20Marrocchelli-.jpg');"><div class="fellow_caption_back"><div class="fellow_name">Dario Marrocchelli</div><div class="fellow_company">Wayfair</div></div></div></div><div class="fellow_item w-col w-col-2 w-dyn-item"><div class="fellows_tooltip"><div class="arrow_down"></div><div class="orange_header tooltip_header"><div class="tooltip_header_container"><div class="tooltip_name">Liazo Li</div><div class="toottip_title">R&amp;D Scientist</div><div class="comma">,</div><div class="tooltip_company">Seven Bridges</div></div></div><div class="tooltip_content"><div class="tooltip_title">Insight Project</div><div class="tooltip_project">Limelight: Optimizing bioprocessing experiments </div><div class="tooltip_title">background</div><div class="tooltip_background">Mathematics, University of Minnesota, Twin Cities, PhD</div></div></div><div class="fellow_img orange_img" style="background-image: url('https://daks2k3a4ib2z.cloudfront.net/575a3225be8188bf7a028e29/578971c667a854dc0778dc36_Lizao%20Li-.jpg');"><div class="fellow_caption_back"><div class="fellow_name">Liazo Li</div><div class="fellow_company">Seven Bridges</div></div></div></div><div class="fellow_item w-col w-col-2 w-dyn-item"><div class="fellows_tooltip"><div class="arrow_down"></div><div class="orange_header tooltip_header"><div class="tooltip_header_container"><div class="tooltip_name">Adam Merberg</div><div class="toottip_title">Data Scientist</div><div class="comma">,</div><div class="tooltip_company">AbilTo</div></div></div><div class="tooltip_content"><div class="tooltip_title">Insight Project</div><div class="tooltip_project">MedMiner: Scanning health records for meaning</div><div class="tooltip_title">background</div><div class="tooltip_background">Mathematics, UC Berkeley, Postdoc</div></div></div><div class="fellow_img orange_img" style="background-image: url('https://daks2k3a4ib2z.cloudfront.net/575a3225be8188bf7a028e29/57896d9d811907e90704f17f_Adam-1.jpg');"><div class="fellow_caption_back"><div class="fellow_name">Adam Merberg</div><div class="fellow_company">AbilTo</div></div></div></div><div class="fellow_item w-col w-col-2 w-dyn-item"><div class="fellows_tooltip"><div class="arrow_down"></div><div class="orange_header tooltip_header"><div class="tooltip_header_container"><div class="tooltip_name">Tamas Madl</div><div class="toottip_title">Health Entrepreneur</div><div class="comma">,</div></div></div><div class="tooltip_content"><div class="tooltip_title">Insight Project</div><div class="tooltip_project">HeartShield: Check your heart health using your webcam</div><div class="tooltip_title">background</div><div class="tooltip_background">Computer Science, University of Manchester, PhD</div></div></div><div class="fellow_img orange_img" style="background-image: url('https://daks2k3a4ib2z.cloudfront.net/575a3225be8188bf7a028e29/5789786067a854dc0778e267_Tamas%20Madl-.jpg');"><div class="fellow_caption_back"><div class="fellow_name">Tamas Madl</div></div></div></div><div class="fellow_item w-col w-col-2 w-dyn-item"><div class="fellows_tooltip"><div class="arrow_down"></div><div class="orange_header tooltip_header"><div class="tooltip_header_container"><div class="tooltip_name">Genevieve Shattow</div><div class="toottip_title">Data Scientist</div><div class="comma">,</div><div class="tooltip_company">Tempaltert</div></div></div><div class="tooltip_content"><div class="tooltip_title">Insight Project</div><div class="tooltip_project">MediTweeter: Discovering medical professionals on Twitter</div><div class="tooltip_title">background</div><div class="tooltip_background">Theoretical Astrophysics Swinburne University of Technology, PhD</div></div></div><div class="fellow_img orange_img" style="background-image: url('https://daks2k3a4ib2z.cloudfront.net/575a3225be8188bf7a028e29/5789726667a854dc0778dc37_Genevieve-1.jpg');"><div class="fellow_caption_back"><div class="fellow_name">Genevieve Shattow</div><div class="fellow_company">Tempaltert</div></div></div></div><div class="fellow_item w-col w-col-2 w-dyn-item"><div class="fellows_tooltip"><div class="arrow_down"></div><div class="orange_header tooltip_header"><div class="tooltip_header_container"><div class="tooltip_name">Sun-Gou Ji</div><div class="toottip_title">R&amp;D Scientist</div><div class="comma">,</div><div class="tooltip_company">Seven Bridges</div></div></div><div class="tooltip_content"><div class="tooltip_title">Insight Project</div><div class="tooltip_project">Genomix: Mixing genomic data for an Alzheimer&#39;s cure</div><div class="tooltip_title">background</div><div class="tooltip_background">Statistical Genetics, University of Cambridge, Sanger Institute, PhD</div></div></div><div class="fellow_img orange_img" style="background-image: url('https://daks2k3a4ib2z.cloudfront.net/575a3225be8188bf7a028e29/578977ac811907e90704fe2c_Sun-Gou%20Ji-.jpg');"><div class="fellow_caption_back"><div class="fellow_name">Sun-Gou Ji</div><div class="fellow_company">Seven Bridges</div></div></div></div></div></div><div class="fellows_list w-dyn-list"><div class="empty_state w-dyn-empty"><p class="empty_state">No items found.</p></div></div><div class="fellows_list w-dyn-list"><div class="empty_state w-dyn-empty"><p class="empty_state">No items found.</p></div></div></div></div><div class="orange_bg section6"><div class="section6_container"><a class="apply_now_btn apply_orange w-inline-block" href="/apply"><div class="apply_now_btn_text">apply now</div></a><a class="btn_signup w-inline-block" href="/health-data-notifications-list"><div class="btn_signup_text">Sign up for notification</div></a></div></div><div class="footer"><div class="footer_container"><div class="footer_left"><a class="health_nav_it w-inline-block" href="/"><div class="health_nav_text">data science</div></a><a class="health_nav_it middle w-inline-block" href="/data-engineering"><div class="health_nav_text">data engineering</div></a><a class="active health_nav_it middle w-inline-block" href="/"><div class="active health_nav_text">health data</div></a><div class="invisible_sep margin-bottom"></div><a class="active_orange orange_nav right_nav_item w-inline-block" href="/fellows"><div class="right_nav_item_text">fellows</div></a><a class="bottom orange_nav right_nav_item w-inline-block" href="/apply"><div class="bottom padding right_nav_item_text">apply</div></a><a class="bottom orange_nav right_nav_item w-inline-block" href="http://insight-data-labs-sd.webflow.io/blog"><div class="bottom padding right_nav_item_text">blog</div></a><a class="bottom hide orange_nav right_nav_item w-inline-block" href="/faq"><div class="bottom padding right_nav_item_text">faq</div></a><div class="invisible_sep margin-bottom"></div></div><div class="footer_right"><a class="w-inline-block" href="https://twitter.com/insightdatalabs"><div class="orange twitter_icon1"></div></a><a class="w-inline-block" href="https://www.facebook.com/InsightDataScience/"><div class="facebook_icon1 orange"></div></a><a class="w-inline-block" href="https://www.linkedin.com/company/insight-data-science"><div class="linkedin_icon1 orange"></div></a><a class="w-inline-block" href="mailto:datalabs@insightdatascience.com"><div class="mail_icon1 orange"></div></a><a class="footer_mail_link" href="mailto:info@insightdatascience.com">info@insightdatascience.com</a><div class="copy_text">©2016 Insight Data Science. Fellows <em>first</em></div></div></div></div></div><div class="side_nav_bar" id="side_nav_bar"><div class="mobile_button_wrapper"><a class="mobile_nav_item mobile_orange w-inline-block" href="http://insightdatascience.com"><div>data science</div></a><a class="mobile_nav_item mobile_orange w-inline-block" href="http://insightdataengineering.com/"><div>data engineering</div></a><a class="mobile_nav_item mobile_orange w-inline-block" href="/"><div>health data</div></a><a class="mobile_nav_item mobile_orange page_nav w-inline-block" href="/fellows"><div>Fellows</div></a><a class="mobile_nav_item mobile_orange page_nav w-inline-block" href="/apply"><div>apply</div></a><a class="mobile_nav_item mobile_orange page_nav w-inline-block" href="http://blog.insightdatascience.com"><div>blog</div></a></div></div><script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js" type="text/javascript"></script>
+
+<script src="https://daks2k3a4ib2z.cloudfront.net/575a3225be8188bf7a028e29/js/webflow.eaacc9743.js" type="text/javascript"></script>
+
+<!--[if lte IE 9]><script src="//cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif]--><script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+
+<script>
+
+$(document).ready(function(){
+
+
+
+$("#header_bt_4").click(function(){
+
+window.location.replace("http://insight-data-labs-sd.webflow.io");
+
+});
+
+
+
+$("#header_bt_8").click(function(){
+
+window.location.replace("http://insight-data-labs-sd.webflow.io/blog");
+
+});
+
+});
+
+</script><script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+<script>
+
+$(document).ready(function(){
+
+var fellow_width = $(".fellow_img").width();
+
+$(".fellow_img").css("height",fellow_width);
+
+$(".fellows_tooltip").css("bottom",fellow_width + 20);
+
+
+
+$(window).bind('resize', function(e) {
+
+window.resizeEvt;
+
+$(window).resize(function() {
+
+clearTimeout(window.resizeEvt);
+
+window.resizeEvt = setTimeout(function() {
+
+
+
+var fellow_width = $(".fellow_img").width();
+
+$(".fellow_img").css("height",fellow_width);
+
+$(".fellows_tooltip").css("bottom",fellow_width + 20);
+
+
+
+}, 10);
+
+});
+
+});
+
+
+
+$("#header_bt_3").addClass("active_item_orange");
+
+$("#footer_bt_3").addClass("active_item_orange");
+
+$("#header_bt_5").addClass("active_item_orange");
+
+$("#footer_bt_5").addClass("active_item_orange");
+
+
+
+
+
+// mobile side nav
+
+var nav = 0;
+
+
+
+$(".mobile_nav_button").click(function(){
+
+if ( nav == 1 ) {
+
+$("#full_website").animate({"right":"0%"}, 500);
+
+$("#side_nav_bar").animate({"right":"-80%"}, 500);
+
+nav = 0;
+
+} else {
+
+$("#full_website").animate({"right":"80%"}, 500);
+
+$("#side_nav_bar").animate({"right":"0%"}, 500);
+
+nav = 1;
+
+}
+
+});
+
+
+
+// mobile section nav
+
+
+
+var expanded = 0;
+
+
+
+function expand_close() {
+
+if (expanded == 0) { $(".mobile_sub_nav").css("display","block"); expanded = 1; }
+
+else { $(".mobile_sub_nav").css("display","none"); expanded = 0; }
+
+}
+
+
+
+
+
+$("#link_dropdown").click(function(){
+
+$('.mobile_active_nav').html($(this).html());
+
+expand_close();
+
+});
+
+
+
+$("#mlink_program").click(function() {
+
+$('.mobile_active_nav').html($(this).html());
+
+expand_close();
+
+});
+
+
+
+$("#mlink_fellows").click(function() {
+
+$('.mobile_active_nav').html($(this).html());
+
+expand_close();
+
+});
+
+
+
+$("#mlink_mentorship").click(function() {
+
+$('.mobile_active_nav').html($(this).html());
+
+expand_close();
+
+});
+
+
+
+$("#mlink_industry").click(function() {
+
+$('.mobile_active_nav').html($(this).html());
+
+expand_close();
+
+});
+
+
+
+$("#mlink_community").click(function() {
+
+$('.mobile_active_nav').html($(this).html());
+
+expand_close();
+
+});
+
+
+
+
+
+window.f_slide = 1;
+
+window.p_slide = 1;
+
+window.m_slide = 1;
+
+window.i_slide = 1;
+
+window.c_slide = 1;
+
+window.header_slide = 1;
+
+
+
+$("#link_program, #mlink_program").click(function(){
+
+$("#pslide_inner_container").animate({left:0}, 300);
+
+$("#pcircle_1").addClass("blue_filled");
+
+$("#pcircle_2, #pcircle_3, #pcircle_4, #pcircle_5, #pcircle_6, #pcircle_7, #pcircle_8, #pcircle_9").removeClass("blue_filled");
+
+
+
+p_slide = 1;
+
+$("#link_program").addClass("active_nav");
+
+$("#link_fellows, #link_mentorship, #link_industry, #link_community").removeClass("active_nav"); 
+
+$("#program_content").css("display","block");
+
+$("#fellows_content, #mentorship_content, #industry_content, #community_content").css("display","none");
+
+});
+
+
+
+$("#link_fellows, #mlink_fellows").click(function(){
+
+$("#fslide_inner_container").animate({left:0}, 300);
+
+$("#fcircle_1").addClass("blue_filled");
+
+$("#fcircle_2, #fcircle_3, #fcircle_4, #fcircle_5, #fcircle_6, #fcircle_7, #fcircle_8, #fcircle_9").removeClass("blue_filled");
+
+
+
+f_slide = 1;
+
+$("#link_program, #link_mentorship, #link_industry, #link_community").removeClass("active_nav");
+
+$("#link_fellows").addClass("active_nav");
+
+
+
+$("#program_content, #mentorship_content, #industry_content, #community_content").css("display","none");
+
+$("#fellows_content").css("display","block");
+
+});
+
+
+
+
+
+
+
+
+
+$("#gq_link").click(function(){
+
+$("#gq_link").addClass("active_faq_item");
+
+$("#about_link").removeClass("active_faq_item");
+
+$("#admissions_link").removeClass("active_faq_item");
+
+$("#before_link").removeClass("active_faq_item");
+
+$("#aboutr_link").removeClass("active_faq_item");
+
+});
+
+
+
+$("#about_link").click(function(){
+
+$("#gq_link").removeClass("active_faq_item");
+
+$("#about_link").addClass("active_faq_item");
+
+$("#admissions_link").removeClass("active_faq_item");
+
+$("#before_link").removeClass("active_faq_item");
+
+$("#aboutr_link").removeClass("active_faq_item");
+
+});
+
+
+
+
+
+$("#admissions_link").click(function(){
+
+$("#gq_link").removeClass("active_faq_item");
+
+$("#about_link").removeClass("active_faq_item");
+
+$("#admissions_link").addClass("active_faq_item");
+
+$("#before_link").removeClass("active_faq_item");
+
+$("#aboutr_link").removeClass("active_faq_item");
+
+});
+
+
+
+
+
+$("#before_link").click(function(){
+
+$("#gq_link").removeClass("active_faq_item");
+
+$("#about_link").removeClass("active_faq_item");
+
+$("#admissions_link").removeClass("active_faq_item");
+
+$("#before_link").addClass("active_faq_item");
+
+$("#aboutr_link").removeClass("active_faq_item");
+
+});
+
+
+
+
+
+$("#aboutr_link").click(function(){
+
+$("#gq_link").removeClass("active_faq_item");
+
+$("#about_link").removeClass("active_faq_item");
+
+$("#admissions_link").removeClass("active_faq_item");
+
+$("#before_link").removeClass("active_faq_item");
+
+$("#aboutr_link").addClass("active_faq_item");
+
+});
+
+
+
+});
+
+</script>
+
+</body></html>
+
+
